@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>获取ISP商户下的IP列表 | 继续</title>
+<title>树莓派3B无线AP功能开启 | 继续</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,20 +92,59 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">获取ISP商户下的IP列表</h2>
-            <div class="post-date">2019-05-23</div>
+            <h2 class="post-title">树莓派3B无线AP功能开启</h2>
+            <div class="post-date">2019-06-25</div>
             
             <div class="post-content">
-              <p>可以在bgp.he.net这里然后输入关键词
-直达腾讯IP列表链接如下：
-https://bgp.he.net/search?search%5Bsearch%5D=tencent&amp;commit=Search</p>
+              <p>这个算是一键命令
+不用敲命令的创建方式：
+GitHub上的项目
+https://github.com/oblique/create_ap
+git clone https://github.com/oblique/create_ap.git
+cd create_ap
+sudo make install
+安装完成
+安装下依赖库
+sudo apt-get install util-linux procps hostapd iproute2 iw haveged dnsmasq
+接下来运行命令开启AP
+启动AP服务systemctl start create_ap
+添加到开机启动systemctl enable create_ap
+/etc/create_ap.conf这里是配置文件，可以直接改里面的信息，然后运行上面的命令也可以生成自定义的
+CHANNEL=default
+GATEWAY=10.0.0.1
+WPA_VERSION=2
+ETC_HOSTS=0
+DHCP_DNS=gateway
+NO_DNS=0
+NO_DNSMASQ=0
+HIDDEN=0
+MAC_FILTER=0
+MAC_FILTER_ACCEPT=/etc/hostapd/hostapd.accept
+ISOLATE_CLIENTS=0
+SHARE_METHOD=nat
+IEEE80211N=0
+IEEE80211AC=0
+HT_CAPAB=[HT40+]
+VHT_CAPAB=
+DRIVER=nl80211
+NO_VIRT=0
+COUNTRY=
+FREQ_BAND=2.4
+NEW_MACADDR=
+DAEMONIZE=0
+NO_HAVEGED=0
+WIFI_IFACE=wlan0
+INTERNET_IFACE=eth0
+SSID=MyAccessPoint
+PASSPHRASE=12345678
+USE_PSK=0</p>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://wcwtfhvk.github.io//tag/LeOoxqwKT" class="tag">
-                    网络转载
+                  <a href="https://wcwtfhvk.github.io//tag/bCi6P6C1R" class="tag">
+                    技术经验
                   </a>
                 
               </div>
@@ -113,9 +152,9 @@ https://bgp.he.net/search?search%5Bsearch%5D=tencent&amp;commit=Search</p>
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://wcwtfhvk.github.io//post/html-biao-dan-nei-rong-tong-guo-php-cun-chu-dao-txt-wen-jian">
+                <a href="https://wcwtfhvk.github.io//post/xiao-mi-led-cai-deng-pei-he-esp8266-esp-easy-shang-de-json-shu-ju-bian-huan-yan-se-wei-wan-cheng">
                   <h3 class="post-title">
-                    HTML表单内容通过PHP存储到TXT文件
+                    小米LED彩灯配合ESP8266 ESP Easy上的JSON数据变换颜色（未完成）
                   </h3>
                 </a>
               </div>

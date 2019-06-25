@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>获取ISP商户下的IP列表 | 继续</title>
+<title>小米LED彩灯配合ESP8266 ESP Easy上的JSON数据变换颜色（未完成） | 继续</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,20 +92,34 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">获取ISP商户下的IP列表</h2>
-            <div class="post-date">2019-05-23</div>
+            <h2 class="post-title">小米LED彩灯配合ESP8266 ESP Easy上的JSON数据变换颜色（未完成）</h2>
+            <div class="post-date">2019-06-25</div>
             
             <div class="post-content">
-              <p>可以在bgp.he.net这里然后输入关键词
-直达腾讯IP列表链接如下：
-https://bgp.he.net/search?search%5Bsearch%5D=tencent&amp;commit=Search</p>
+              <p>JSON example using Sonoff Basic Smart Switch &amp; ESPEasy.
+ThomasB, Apr-10-2019
+Connect to ESPEasy on local IP (change as needed to match the device) and load the jason into a array called &quot;espez&quot;
+import json, requests
+url = requests.get('http://192.168.1.81/json')
+espez = json.loads(url.text)</p>
+<p>Show an example of printing the current value of the built-in push button switch.
+Device configuration as follows: Task= 1, Device= Switch input-Switch, Name= PBSW
+print(&quot;Device Name: &quot;, espez'Sensors'['TaskName'])
+wendu = int(espez'Sensors''TaskValues'['Value'])</p>
+<p>print(&quot;Temp is : &quot;, wendu)
+if wendu &gt;=27: #判断并且显示温度高低</p>
+<p>print('Hot Temp is:',wendu,'°C')
+else:</p>
+<p>print('Cool Temp is:',wendu,'°C')
+参考链接：
+https://www.letscontrolit.com/forum/viewtopic.php?f=6&amp;t=6612&amp;p=36311</p>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://wcwtfhvk.github.io//tag/LeOoxqwKT" class="tag">
-                    网络转载
+                  <a href="https://wcwtfhvk.github.io//tag/bCi6P6C1R" class="tag">
+                    技术经验
                   </a>
                 
               </div>
@@ -113,9 +127,9 @@ https://bgp.he.net/search?search%5Bsearch%5D=tencent&amp;commit=Search</p>
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://wcwtfhvk.github.io//post/html-biao-dan-nei-rong-tong-guo-php-cun-chu-dao-txt-wen-jian">
+                <a href="https://wcwtfhvk.github.io//post/50-ge">
                   <h3 class="post-title">
-                    HTML表单内容通过PHP存储到TXT文件
+                    50个
                   </h3>
                 </a>
               </div>
