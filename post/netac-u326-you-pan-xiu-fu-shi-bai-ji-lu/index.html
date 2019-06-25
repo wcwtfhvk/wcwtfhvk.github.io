@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>HTML表单内容通过PHP存储到TXT文件 | 继续</title>
+<title>Netac U326优盘修复失败记录 | 继续</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,58 +92,57 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">HTML表单内容通过PHP存储到TXT文件</h2>
-            <div class="post-date">2019-05-12</div>
+            <h2 class="post-title">Netac U326优盘修复失败记录</h2>
+            <div class="post-date">2019-04-11</div>
             
             <div class="post-content">
-              <p>html部分</p>
-<form action="action.php" method="post">
-<p>您的姓名: <input type="text" name="name" /></p>
-<p>您的微信: <input type="text" name="wechat" /></p>
-<p>您的公司: <input type="text" name="company" /></p>
-<p>您的电话: <input type="text" name="tel" /></p>
-<p>您的职位: <input type="text" name="zhiwei" /></p>
-<p><input type="submit" /></p>
-</form>
-<p>php部分</p>
-<?php 
-session_start(); 
-$allow_sep = "3000000"; 
-if (isset($_SESSION["post_sep"])) 
-{ 
-if (time() - $_SESSION["post_sep"] < $allow_sep) 
-{
-
-    exit("请不要刷新！刷新后礼品逃跑了。。。"); 
-} 
-else 
-{
-
- $_SESSION["post_sep"] = time(); 
-} 
-} 
-else 
-{ 
-$_SESSION["post_sep"] = time(); 
-} 
-?>
-<?php
-$name = $_POST['name'];
-$wechat = $_POST['wechat'];
-$company = $_POST['company'];
-$tel = $_POST['tel'];
-$zhiwei = $_POST['zhiwei'];
-$content = "姓名: ".$name ."微信: ".$wechat."公司: ".$company."联系电话: ".$tel."职位: ".$zhiwei."\n";
-$f = fopen("/xxx/list.txt", 'a+');//指定文件路径Windows下用/，在文件的结尾插入，所以用了fopen和a+，
-fwrite($f, $content);
-fclose($f);
-?>
-<p>嗨~你好！ <?php echo htmlspecialchars($_POST['name']); ?></p>
-<p>微信<?php echo htmlspecialchars($_POST['wechat']); ?></p>
-<p>联系电话<?php echo (int)$_POST['tel']; ?></p>
-<p>公司<?php echo htmlspecialchars($_POST['company']); ?></p>
-<p>职位<?php echo htmlspecialchars($_POST['zhiwei']); ?></p>
-<p>请将该页面展示给工作人员后领取小礼品请勿刷新改页面</p>
+              <p>在某航空公司用积分换了个16G优盘，原本以为薅了羊毛，没想到是个黑优盘
+用ChipGenius_v4_19_0319
+下载地址：
+https://www.mydigit.cn/forum.php?mod=viewthread&amp;tid=16812</p>
+<p>设备描述: [D:]USB 大容量存储设备(Netac OnlyDisk)
+　设备类型: 大容量存储设备</p>
+<p>协议版本: USB 2.00
+　当前速度: 高速(HighSpeed)
+　电力消耗: 100mA</p>
+<p>USB设备ID: VID = 0DD8 PID = 0408
+设备序列号: 570DA431150D</p>
+<p>设备供应商: Netac
+　设备名称: OnlyDisk
+设备修订版: 0100</p>
+<p>产品制造商: Netac
+　产品型号: OnlyDisk
+产品修订版: 8.07</p>
+<p>主控厂商: Alcor Micro(安国)
+　主控型号: AU6989SN-GTC [F500] - F/W FA01
+闪存识别码: EC3A94C3A4CA - Samsung(三星) - 1CE/单通道 [MLC] -&gt; 总容量 = 16GB</p>
+<p>在线资料: http://dl.mydigit.net/special/up/alcor.html</p>
+<p>可能的闪存型号
+Unknown(未知)</p>
+<p>闪存识别码映射表
+[通道 0] [通道 1]
+EC3A94C3A4CA --------</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>看下来根据主控型号，找到老毛子的一个网站。下载量产工具，上面的芯片检测工具也有给量产工具链接，但是试下来也一样没有反应。老毛子这个版本更新，试下来也是一样。
+https://www.usbdev.ru/files/alcor/alcordsmp/
+AlcorDSMP_19.01.25.00
+最后在老毛子的那个网站发现了这个工具，虽然是appha版本，但是给出的提示应该很明显了。。。扩容盘。垃圾扔了。。。
+MyDiskFix-alpha2
+https://www.usbdev.ru/files/mydiskfix/</p>
+<p>设备名称: Netac OnlyDisk
+报告容量: 14575MB
+测试结束!
+实际容量: 至多0.00MB</p>
+<p>注意！测试中发现问题！</p>
+<p>该可移动磁盘是用黑片制造的！
+此芯片已无完好区块，请考虑更换FLASH芯片！
+谨防假冒！</p>
 
             </div>
             
@@ -158,9 +157,9 @@ fclose($f);
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://wcwtfhvk.github.io//post/debian-hou-tai-yun-xing-frp">
+                <a href="https://wcwtfhvk.github.io//post/yong-ip-zuo-you-xiang-you-xiang-ge-shi-xxip">
                   <h3 class="post-title">
-                    Debian 后台运行FRP
+                    用 IP 做邮箱 邮箱格式 : XX@IP
                   </h3>
                 </a>
               </div>
