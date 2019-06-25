@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>获取ISP商户下的IP列表 | 继续</title>
+<title>Debian 后台运行FRP | 继续</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,33 +92,34 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">获取ISP商户下的IP列表</h2>
-            <div class="post-date">2019-05-23</div>
+            <h2 class="post-title">Debian 后台运行FRP</h2>
+            <div class="post-date">2019-05-05</div>
             
             <div class="post-content">
-              <p>可以在bgp.he.net这里然后输入关键词
-直达腾讯IP列表链接如下：
-https://bgp.he.net/search?search%5Bsearch%5D=tencent&amp;commit=Search</p>
+              <p>用 supervisor
+先安装 supervisor
+sudo apt install supervisor
+创建 supervisor frps 配置文件
+在 /etc/supervisor/conf.d
+创建撇脂文件 frp.conf</p>
+<p>[program:frp]
+command = /root/frp/frps -c /root/frp/frps.ini
+autostart = true</p>
+<p>重启supervisor服务
+systemctl restart supervisor
+查看supervisor运行状态
+supervisorctl status</p>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://wcwtfhvk.github.io//tag/LeOoxqwKT" class="tag">
-                    网络转载
+                  <a href="https://wcwtfhvk.github.io//tag/bCi6P6C1R" class="tag">
+                    技术经验
                   </a>
                 
               </div>
             
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://wcwtfhvk.github.io//post/html-biao-dan-nei-rong-tong-guo-php-cun-chu-dao-txt-wen-jian">
-                  <h3 class="post-title">
-                    HTML表单内容通过PHP存储到TXT文件
-                  </h3>
-                </a>
-              </div>
             
 
             
