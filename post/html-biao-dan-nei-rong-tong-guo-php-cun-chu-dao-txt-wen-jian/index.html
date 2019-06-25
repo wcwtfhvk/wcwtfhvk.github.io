@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>继续</title>
+<title>HTML表单内容通过PHP存储到TXT文件 | 继续</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,62 +91,75 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://wcwtfhvk.github.io//post/50-ge">
-                  <h2 class="post-title">50个</h2>
-                </a>
-                <div class="post-date">
-                  2019-05-30
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-                <a class="right" href="https://wcwtfhvk.github.io//post/50-ge">
-                  <div class="feature-container" style="background-image: url('https://blog.jixu.me/usr/themes/AL_lolimeow/images/rand/2.jpg')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://wcwtfhvk.github.io//post/huo-qu-isp-shang-hu-xia-de-ip-lie-biao">
-                  <h2 class="post-title">获取ISP商户下的IP列表</h2>
-                </a>
-                <div class="post-date">
-                  2019-05-23
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://wcwtfhvk.github.io//post/html-biao-dan-nei-rong-tong-guo-php-cun-chu-dao-txt-wen-jian">
-                  <h2 class="post-title">HTML表单内容通过PHP存储到TXT文件</h2>
-                </a>
-                <div class="post-date">
-                  2019-05-12
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
+          <div class="post-detail">
+            <h2 class="post-title">HTML表单内容通过PHP存储到TXT文件</h2>
+            <div class="post-date">2019-05-12</div>
+            
+            <div class="post-content">
+              <p>html部分</p>
+<form action="action.php" method="post">
+<p>您的姓名: <input type="text" name="name" /></p>
+<p>您的微信: <input type="text" name="wechat" /></p>
+<p>您的公司: <input type="text" name="company" /></p>
+<p>您的电话: <input type="text" name="tel" /></p>
+<p>您的职位: <input type="text" name="zhiwei" /></p>
+<p><input type="submit" /></p>
+</form>
+<p>php部分</p>
+<?php 
+session_start(); 
+$allow_sep = "3000000"; 
+if (isset($_SESSION["post_sep"])) 
+{ 
+if (time() - $_SESSION["post_sep"] < $allow_sep) 
+{
 
-          <div class="pagination-container">
-  
-  
-</div>
+    exit("请不要刷新！刷新后礼品逃跑了。。。"); 
+} 
+else 
+{
+
+ $_SESSION["post_sep"] = time(); 
+} 
+} 
+else 
+{ 
+$_SESSION["post_sep"] = time(); 
+} 
+?>
+<?php
+$name = $_POST['name'];
+$wechat = $_POST['wechat'];
+$company = $_POST['company'];
+$tel = $_POST['tel'];
+$zhiwei = $_POST['zhiwei'];
+$content = "姓名: ".$name ."微信: ".$wechat."公司: ".$company."联系电话: ".$tel."职位: ".$zhiwei."\n";
+$f = fopen("/xxx/list.txt", 'a+');//指定文件路径Windows下用/，在文件的结尾插入，所以用了fopen和a+，
+fwrite($f, $content);
+fclose($f);
+?>
+<p>嗨~你好！ <?php echo htmlspecialchars($_POST['name']); ?></p>
+<p>微信<?php echo htmlspecialchars($_POST['wechat']); ?></p>
+<p>联系电话<?php echo (int)$_POST['tel']; ?></p>
+<p>公司<?php echo htmlspecialchars($_POST['company']); ?></p>
+<p>职位<?php echo htmlspecialchars($_POST['zhiwei']); ?></p>
+<p>请将该页面展示给工作人员后领取小礼品请勿刷新改页面</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://wcwtfhvk.github.io//tag/bCi6P6C1R" class="tag">
+                    技术经验
+                  </a>
+                
+              </div>
+            
+            
+
+            
+
+          </div>
 
         </div>
       </div>
