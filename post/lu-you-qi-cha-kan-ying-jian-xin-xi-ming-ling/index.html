@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Netac U326优盘修复失败记录 | 继续</title>
+<title>路由器查看硬件信息命令 | 继续</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,57 +92,23 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Netac U326优盘修复失败记录</h2>
-            <div class="post-date">2019-04-11</div>
+            <h2 class="post-title">路由器查看硬件信息命令</h2>
+            <div class="post-date">2018-12-02</div>
             
             <div class="post-content">
-              <p>在某航空公司用积分换了个16G优盘，原本以为薅了羊毛，没想到是个黑优盘
-用ChipGenius_v4_19_0319
-下载地址：
-https://www.mydigit.cn/forum.php?mod=viewthread&amp;tid=16812</p>
-<p>设备描述: [D:]USB 大容量存储设备(Netac OnlyDisk)
-　设备类型: 大容量存储设备</p>
-<p>协议版本: USB 2.00
-　当前速度: 高速(HighSpeed)
-　电力消耗: 100mA</p>
-<p>USB设备ID: VID = 0DD8 PID = 0408
-设备序列号: 570DA431150D</p>
-<p>设备供应商: Netac
-　设备名称: OnlyDisk
-设备修订版: 0100</p>
-<p>产品制造商: Netac
-　产品型号: OnlyDisk
-产品修订版: 8.07</p>
-<p>主控厂商: Alcor Micro(安国)
-　主控型号: AU6989SN-GTC [F500] - F/W FA01
-闪存识别码: EC3A94C3A4CA - Samsung(三星) - 1CE/单通道 [MLC] -&gt; 总容量 = 16GB</p>
-<p>在线资料: http://dl.mydigit.net/special/up/alcor.html</p>
-<p>可能的闪存型号
-Unknown(未知)</p>
-<p>闪存识别码映射表
-[通道 0] [通道 1]
-EC3A94C3A4CA --------</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<p>看下来根据主控型号，找到老毛子的一个网站。下载量产工具，上面的芯片检测工具也有给量产工具链接，但是试下来也一样没有反应。老毛子这个版本更新，试下来也是一样。
-https://www.usbdev.ru/files/alcor/alcordsmp/
-AlcorDSMP_19.01.25.00
-最后在老毛子的那个网站发现了这个工具，虽然是appha版本，但是给出的提示应该很明显了。。。扩容盘。垃圾扔了。。。
-MyDiskFix-alpha2
-https://www.usbdev.ru/files/mydiskfix/</p>
-<p>设备名称: Netac OnlyDisk
-报告容量: 14575MB
-测试结束!
-实际容量: 至多0.00MB</p>
-<p>注意！测试中发现问题！</p>
-<p>该可移动磁盘是用黑片制造的！
-此芯片已无完好区块，请考虑更换FLASH芯片！
-谨防假冒！</p>
+              <p>在SSH下输入</p>
+<p>dmesg |grep spi |grep Kbytes</p>
+<p>显示</p>
+<p>[ 0.760000] m25p80 spi0.0: w25q128 (16384 Kbytes)</p>
+<p>16384/1024=16M 那路由器就是16M的Flash</p>
+<p>查看内存就比较简单了我一般用</p>
+<p>free -m</p>
+<p>命令</p>
+<p>显示的</p>
+<p>61068/1024差不多 60M的内存</p>
+<p>然后就是查看CPU芯片了</p>
+<p>cat /proc/cpuinfo</p>
+<p>这段有的命令有时候可以用lscpu代替也可以</p>
 
             </div>
             
@@ -154,15 +120,6 @@ https://www.usbdev.ru/files/mydiskfix/</p>
                 
               </div>
             
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://wcwtfhvk.github.io//post/yong-ip-zuo-you-xiang-you-xiang-ge-shi-xxip">
-                  <h3 class="post-title">
-                    用 IP 做邮箱 邮箱格式 : XX@IP
-                  </h3>
-                </a>
-              </div>
             
 
             
