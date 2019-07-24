@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wcwtfhvk.github.io//favicon.ico?v=1563944257755">
+<link rel="shortcut icon" href="https://wcwtfhvk.github.io//favicon.ico?v=1563944511888">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wcwtfhvk.github.io//styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://wcwtfhvk.github.io/">
-        <img src="https://wcwtfhvk.github.io//images/avatar.png?v=1563944257755" class="site-logo">
+        <img src="https://wcwtfhvk.github.io//images/avatar.png?v=1563944511888" class="site-logo">
         <h1 class="site-title">继续</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -96,22 +96,22 @@
             <div class="post-date">2019-06-25</div>
             
             <div class="post-content">
-              <p>JSON example using Sonoff Basic Smart Switch &amp; ESPEasy.
-ThomasB, Apr-10-2019
-Connect to ESPEasy on local IP (change as needed to match the device) and load the jason into a array called &quot;espez&quot;
-import json, requests
-url = requests.get('http://192.168.1.81/json')
+              <p>JSON example using Sonoff Basic Smart Switch &amp; ESPEasy.<br>
+ThomasB, Apr-10-2019<br>
+Connect to ESPEasy on local IP (change as needed to match the device) and load the jason into a array called &quot;espez&quot;<br>
+import json, requests<br>
+url = requests.get('http://192.168.1.81/json')<br>
 espez = json.loads(url.text)</p>
-<p>Show an example of printing the current value of the built-in push button switch.
-Device configuration as follows: Task= 1, Device= Switch input-Switch, Name= PBSW
-print(&quot;Device Name: &quot;, espez'Sensors'['TaskName'])
+<p>Show an example of printing the current value of the built-in push button switch.<br>
+Device configuration as follows: Task= 1, Device= Switch input-Switch, Name= PBSW<br>
+print(&quot;Device Name: &quot;, espez'Sensors'['TaskName'])<br>
 wendu = int(espez'Sensors''TaskValues'['Value'])</p>
-<p>print(&quot;Temp is : &quot;, wendu)
+<p>print(&quot;Temp is : &quot;, wendu)<br>
 if wendu &gt;=27: #判断并且显示温度高低</p>
-<p>print('Hot Temp is:',wendu,'°C')
+<p>print('Hot Temp is:',wendu,'°C')<br>
 else:</p>
-<p>print('Cool Temp is:',wendu,'°C')
-参考链接：
+<p>print('Cool Temp is:',wendu,'°C')<br>
+参考链接：<br>
 https://www.letscontrolit.com/forum/viewtopic.php?f=6&amp;t=6612&amp;p=36311</p>
 
             </div>
