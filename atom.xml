@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wcwtfhvk.github.io/</id>
     <title>继续</title>
-    <updated>2019-06-28T00:59:15.968Z</updated>
+    <updated>2019-07-24T04:54:06.348Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wcwtfhvk.github.io/"/>
     <link rel="self" href="https://wcwtfhvk.github.io//atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://wcwtfhvk.github.io//images/avatar.png</logo>
     <icon>https://wcwtfhvk.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, 继续</rights>
+    <entry>
+        <title type="html"><![CDATA[注册表一击，Windows10 免密码自动登录域帐户]]></title>
+        <id>https://wcwtfhvk.github.io//post/zhu-ce-biao-yi-ji-windows10-mian-mi-ma-zi-dong-deng-lu-yu-zhang-hu</id>
+        <link href="https://wcwtfhvk.github.io//post/zhu-ce-biao-yi-ji-windows10-mian-mi-ma-zi-dong-deng-lu-yu-zhang-hu">
+        </link>
+        <updated>2019-07-24T04:52:28.000Z</updated>
+        <content type="html"><![CDATA[<p>Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+&quot;AutoAdminLogon&quot;=&quot;1&quot;
+&quot;DefaultUserName&quot;=&quot;域用户&quot;
+&quot;DefaultDomainName&quot;=&quot;域&quot;
+&quot;DefaultPassword&quot;=&quot;密码&quot;</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[MI Max2 刷机指南]]></title>
         <id>https://wcwtfhvk.github.io//post/mi-max2-shua-ji-zhi-nan</id>
@@ -330,62 +344,6 @@ https://www.letscontrolit.com/forum/viewtopic.php?f=6&amp;t=6612&amp;p=36311</p>
         <content type="html"><![CDATA[<p>可以在bgp.he.net这里然后输入关键词
 直达腾讯IP列表链接如下：
 https://bgp.he.net/search?search%5Bsearch%5D=tencent&amp;commit=Search</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HTML表单内容通过PHP存储到TXT文件]]></title>
-        <id>https://wcwtfhvk.github.io//post/html-biao-dan-nei-rong-tong-guo-php-cun-chu-dao-txt-wen-jian</id>
-        <link href="https://wcwtfhvk.github.io//post/html-biao-dan-nei-rong-tong-guo-php-cun-chu-dao-txt-wen-jian">
-        </link>
-        <updated>2019-05-12T02:39:35.000Z</updated>
-        <content type="html"><![CDATA[<p>html部分</p>
-<form action="action.php" method="post">
-<p>您的姓名: <input type="text" name="name" /></p>
-<p>您的微信: <input type="text" name="wechat" /></p>
-<p>您的公司: <input type="text" name="company" /></p>
-<p>您的电话: <input type="text" name="tel" /></p>
-<p>您的职位: <input type="text" name="zhiwei" /></p>
-<p><input type="submit" /></p>
-</form>
-<p>php部分</p>
-<?php 
-session_start(); 
-$allow_sep = "3000000"; 
-if (isset($_SESSION["post_sep"])) 
-{ 
-if (time() - $_SESSION["post_sep"] < $allow_sep) 
-{
-
-    exit("请不要刷新！刷新后礼品逃跑了。。。"); 
-} 
-else 
-{
-
- $_SESSION["post_sep"] = time(); 
-} 
-} 
-else 
-{ 
-$_SESSION["post_sep"] = time(); 
-} 
-?>
-<?php
-$name = $_POST['name'];
-$wechat = $_POST['wechat'];
-$company = $_POST['company'];
-$tel = $_POST['tel'];
-$zhiwei = $_POST['zhiwei'];
-$content = "姓名: ".$name ."微信: ".$wechat."公司: ".$company."联系电话: ".$tel."职位: ".$zhiwei."\n";
-$f = fopen("/xxx/list.txt", 'a+');//指定文件路径Windows下用/，在文件的结尾插入，所以用了fopen和a+，
-fwrite($f, $content);
-fclose($f);
-?>
-<p>嗨~你好！ <?php echo htmlspecialchars($_POST['name']); ?></p>
-<p>微信<?php echo htmlspecialchars($_POST['wechat']); ?></p>
-<p>联系电话<?php echo (int)$_POST['tel']; ?></p>
-<p>公司<?php echo htmlspecialchars($_POST['company']); ?></p>
-<p>职位<?php echo htmlspecialchars($_POST['zhiwei']); ?></p>
-<p>请将该页面展示给工作人员后领取小礼品请勿刷新改页面</p>
 ]]></content>
     </entry>
 </feed>
