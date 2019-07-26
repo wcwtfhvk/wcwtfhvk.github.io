@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wcwtfhvk.github.io/</id>
     <title>继续</title>
-    <updated>2019-07-24T05:03:02.898Z</updated>
+    <updated>2019-07-26T07:10:33.524Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wcwtfhvk.github.io/"/>
     <link rel="self" href="https://wcwtfhvk.github.io//atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://wcwtfhvk.github.io//images/avatar.png</logo>
     <icon>https://wcwtfhvk.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, 继续</rights>
+    <entry>
+        <title type="html"><![CDATA[微信温度报警提醒，ESP8266,树莓派,Python，PHP]]></title>
+        <id>https://wcwtfhvk.github.io//post/wei-xin-wen-du-bao-jing-ti-xing-esp8266shu-mei-pai-pythonphp</id>
+        <link href="https://wcwtfhvk.github.io//post/wei-xin-wen-du-bao-jing-ti-xing-esp8266shu-mei-pai-pythonphp">
+        </link>
+        <updated>2019-07-26T07:08:00.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>import json,requests,os #调用模块，后期运行命令调用os
+url = requests.get('http://192.168.1.81/json') #获取地址http://192.168.1.81/json
+wd = json.loads(url.text) #载入字典准备查询
+wendu = int(wd['Sensors'][0]['TaskValues'][0]['Value']) #找到温度所在字符串位置
+xwendu = str(wendu)
+wxbj = 'http://wx.qnmlgdsb.com/weixin.php?msg='+'现在服务器机房'+xwendu+'度'
+wxerr = 'http://wx.qnmlgdsb.com/weixin.php?msg='+'现在程序有问题'
+if wendu &gt;=27: #判断并且显示温度高低，后期修改为os运行命令
+	print('Hot Temp is:',wendu,'°C')
+	#bulb.turn_on()
+	#bulb1.turn_on()
+	#bulb.set_rgb(243, 9, 15)
+	#bulb1.set_rgb(198, 135, 15)
+	requests.post(wxbj)
+elif wendu &lt;27:
+	print('Hot Temp is:',wendu,'°C')
+	#bulb.turn_off()
+	#bulb.set_rgb(0, 225,233)
+else:
+    print('Cool Temp is:',wendu,'°C')
+    #bulb.turn_off()
+    requests.post(wxerr)
+</code></pre>
+<p>https://github.com/kaixin1995/InformationPush</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[注册表一击，Windows10 免密码自动登录域帐户]]></title>
         <id>https://wcwtfhvk.github.io//post/zhu-ce-biao-yi-ji-windows10-mian-mi-ma-zi-dong-deng-lu-yu-zhang-hu</id>
@@ -334,17 +366,6 @@ https://www.letscontrolit.com/forum/viewtopic.php?f=6&amp;t=6612&amp;p=36311</p>
 链接：https://www.jianshu.com/p/063ccc9d4dee<br>
 来源：简书<br>
 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[获取ISP商户下的IP列表]]></title>
-        <id>https://wcwtfhvk.github.io//post/huo-qu-isp-shang-hu-xia-de-ip-lie-biao</id>
-        <link href="https://wcwtfhvk.github.io//post/huo-qu-isp-shang-hu-xia-de-ip-lie-biao">
-        </link>
-        <updated>2019-05-23T02:37:22.000Z</updated>
-        <content type="html"><![CDATA[<p>可以在bgp.he.net这里然后输入关键词<br>
-直达腾讯IP列表链接如下：<br>
-https://bgp.he.net/search?search%5Bsearch%5D=tencent&amp;commit=Search</p>
 ]]></content>
     </entry>
 </feed>
