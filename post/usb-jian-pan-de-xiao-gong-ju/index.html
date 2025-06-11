@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>USB键盘的小工具 | 小博客</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wcwtfhvk.github.io/favicon.ico?v=1749627445612">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://wcwtfhvk.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://wcwtfhvk.github.io">
+        <img class="avatar" src="https://wcwtfhvk.github.io/images/avatar.png?v=1749627445612" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://wcwtfhvk.github.io">
+        <h1 class="site-title">小博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://wcwtfhvk.github.io/post-images/usb-jian-pan-de-xiao-gong-ju.png')">
+            </div>
+          
+          <h2 class="post-title">USB键盘的小工具</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2025-04-24</span>
+            
+          </div>
+          <div class="post-content" v-pre>
+            <figure data-type="image" tabindex="1"><img src="https://wcwtfhvk.github.io/post-images/1745462471892.png" alt="" loading="lazy"></figure>
+<p>最近发现RP2040配合Ducky可以做个模拟的键盘，可以懒人模式自动做一些批处理的工作。</p>
+<p>REM Logout<br>
+DELAY 2500<br>
+WINDOWS r<br>
+DELAY 1500<br>
+STRING rundll32.exe user32.dll,LockWorkStation<br>
+DELAY 1500<br>
+ENTER</p>
+<p>插上几秒后自动推出账户锁定。</p>
+<p>REM The next  lines open cmd with admin right and do st<br>
+DELAY 2500<br>
+GUI r<br>
+DELAY 1500<br>
+STRING cmd<br>
+DELAY 1500<br>
+CTRL SHIFT ENTER<br>
+DELAY 3500<br>
+LEFT<br>
+DELAY 1500<br>
+ENTER</p>
+<p>管理员模式下打开CMD</p>
+<p>REM The next  lines open Powershell and do st<br>
+DELAY 2500<br>
+WINDOWS r<br>
+DELAY 1500<br>
+STRING powershell -NoProfile -WindowStyle Hidden irm https://get.activated.win | iex<br>
+DELAY 5500<br>
+CTRL SHIFT ENTER<br>
+DELAY 3500<br>
+LEFT<br>
+DELAY 2500<br>
+ENTER<br>
+DELAY 1500<br>
+ENTER</p>
+<p>激活某些东西</p>
+<p>REM skip network<br>
+DELAY 2500<br>
+SHIFT F10<br>
+DELAY 5500<br>
+STRING start ms-cxh:localonly<br>
+DELAY 1500<br>
+ENTER</p>
+<p>跳过些东西</p>
+<p>https://github.com/dbisu/pico-ducky</p>
+<p>https://github.com/dbisu/pico-ducky/releases</p>
+<p>而且还是一键包，这个实在太简单了。</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://wcwtfhvk.github.io/post/wei-xin-wen-du-bao-jing-ti-xing-esp8266shu-mei-pai-pythonphp/">
+              <h3 class="post-title">
+                下一篇：微信温度报警提醒，ESP8266,树莓派,Python，PHP
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+   | <a class="rss" href="https://wcwtfhvk.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

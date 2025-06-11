@@ -1,0 +1,481 @@
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>小博客</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wcwtfhvk.github.io/favicon.ico?v=1749627445612">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://wcwtfhvk.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://wcwtfhvk.github.io">
+        <img class="avatar" src="https://wcwtfhvk.github.io/images/avatar.png?v=1749627445612" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://wcwtfhvk.github.io">
+        <h1 class="site-title">小博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+        <div class="content-container">
+          
+          
+
+<div class="archives-container">
+  
+    <h2 class="year">2025</h2>
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/yi-yan-jiu-zhi-dao-gong-zuo-neng-li-hen-qiang/">
+            <h2 class="post-title">
+              一眼就知道工作能力很强
+              <small>2025-06-11</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/usb-jian-pan-de-xiao-gong-ju/">
+            <h2 class="post-title">
+              USB键盘的小工具
+              <small>2025-04-24</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    <h2 class="year">2019</h2>
+    
+      
+    
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/wei-xin-wen-du-bao-jing-ti-xing-esp8266shu-mei-pai-pythonphp/">
+            <h2 class="post-title">
+              微信温度报警提醒，ESP8266,树莓派,Python，PHP
+              <small>2019-07-26</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/zhu-ce-biao-yi-ji-windows10-mian-mi-ma-zi-dong-deng-lu-yu-zhang-hu/">
+            <h2 class="post-title">
+              注册表一击，Windows10 免密码自动登录域帐户
+              <small>2019-07-24</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/mi-max2-shua-ji-zhi-nan/">
+            <h2 class="post-title">
+              MI Max2 刷机指南
+              <small>2019-06-28</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/linux-vps-yi-jian-ping-bi-zhi-ding-guo-jia-suo-you-de-ip-fang-wen/">
+            <h2 class="post-title">
+              Linux VPS一键屏蔽指定国家所有的IP访问
+              <small>2019-06-25</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/yi-ren-wo-bian-cheng-lei/">
+            <h2 class="post-title">
+              一人 我编程累
+              <small>2019-06-25</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/yong-adblock-plus-lai-ping-bi-hostloc-shang-de-bu-ke-miao-shu-tou-xiang/">
+            <h2 class="post-title">
+              用Adblock Plus来屏蔽hostloc上的不可描述头像
+              <small>2019-06-25</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/ji-lu-xia-zai-xia-zhao-zi-yuan-de-di-zhi/">
+            <h2 class="post-title">
+              记录下,在下找资源的地址
+              <small>2019-06-25</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/shu-mei-pai-3b-wu-xian-ap-gong-neng-kai-qi/">
+            <h2 class="post-title">
+              树莓派3B无线AP功能开启
+              <small>2019-06-25</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/xiao-mi-led-cai-deng-pei-he-esp8266-esp-easy-shang-de-json-shu-ju-bian-huan-yan-se-wei-wan-cheng/">
+            <h2 class="post-title">
+              小米LED彩灯配合ESP8266 ESP Easy上的JSON数据变换颜色（未完成）
+              <small>2019-06-25</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/50-ge/">
+            <h2 class="post-title">
+              50个
+              <small>2019-05-30</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/huo-qu-isp-shang-hu-xia-de-ip-lie-biao/">
+            <h2 class="post-title">
+              获取ISP商户下的IP列表
+              <small>2019-05-23</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/html-biao-dan-nei-rong-tong-guo-php-cun-chu-dao-txt-wen-jian/">
+            <h2 class="post-title">
+              HTML表单内容通过PHP存储到TXT文件
+              <small>2019-05-12</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/debian-hou-tai-yun-xing-frp/">
+            <h2 class="post-title">
+              Debian 后台运行FRP
+              <small>2019-05-05</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/helpdesk-jing-yan-ji-xu-bu-chong-ing/">
+            <h2 class="post-title">
+              HELPDESK经验（继续补充ING）
+              <small>2019-04-23</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/gong-cheng-shi-men-bu-yao-xiang-yi-bei-zi-kao-ji-zhu-hun-fan-chi-zhuan/">
+            <h2 class="post-title">
+              工程师们,不要想一辈子靠技术混饭吃[转]
+              <small>2019-04-12</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/netac-u326-you-pan-xiu-fu-shi-bai-ji-lu/">
+            <h2 class="post-title">
+              Netac U326优盘修复失败记录
+              <small>2019-04-11</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/yong-ip-zuo-you-xiang-you-xiang-ge-shi-xxip/">
+            <h2 class="post-title">
+              用 IP 做邮箱 邮箱格式 : XX@IP
+              <small>2019-04-11</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/chartjs-zuo-tu-biao-de-wen-ti/">
+            <h2 class="post-title">
+              chartjs做图表的问题
+              <small>2019-04-08</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/openwrt-x86x64-an-zhuang-fang-fa/">
+            <h2 class="post-title">
+              Openwrt x86/x64 安装方法
+              <small>2019-04-02</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/yi-ge-quan-gong-neng-de-xia-zai-gong-ju-ke-yi-xia-bai-du-wang-pan-de-gong-ju/">
+            <h2 class="post-title">
+              一个全功能的下载工具，可以下百度网盘的工具
+              <small>2019-04-02</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+    
+  
+    <h2 class="year">2018</h2>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <article class="post">
+          <a href="https://wcwtfhvk.github.io/post/lu-you-qi-cha-kan-ying-jian-xin-xi-ming-ling/">
+            <h2 class="post-title">
+              路由器查看硬件信息命令
+              <small>2018-12-02</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+  
+</div>
+
+
+        </div>
+
+        <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+   | <a class="rss" href="https://wcwtfhvk.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+      </div>
+      <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>
