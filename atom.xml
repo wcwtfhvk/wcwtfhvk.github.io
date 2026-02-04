@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wcwtfhvk.github.io</id>
+    <title>小博客</title>
+    <updated>2026-02-04T01:16:59.138Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wcwtfhvk.github.io"/>
+    <link rel="self" href="https://wcwtfhvk.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://wcwtfhvk.github.io/images/avatar.png</logo>
+    <icon>https://wcwtfhvk.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2026, 小博客</rights>
+    <entry>
+        <title type="html"><![CDATA[抖音无水印视频下载搭建]]></title>
+        <id>https://wcwtfhvk.github.io/post/dou-yin-wu-shui-yin-shi-pin-xia-zai-da-jian/</id>
+        <link href="https://wcwtfhvk.github.io/post/dou-yin-wu-shui-yin-shi-pin-xia-zai-da-jian/">
+        </link>
+        <updated>2026-02-03T02:22:07.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[h-ui的玩法]]></title>
+        <id>https://wcwtfhvk.github.io/post/h-ui-de-wan-fa/</id>
+        <link href="https://wcwtfhvk.github.io/post/h-ui-de-wan-fa/">
+        </link>
+        <updated>2026-02-03T02:14:08.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows下的一些快捷键]]></title>
+        <id>https://wcwtfhvk.github.io/post/windows-xia-de-yi-xie-kuai-jie-jian/</id>
+        <link href="https://wcwtfhvk.github.io/post/windows-xia-de-yi-xie-kuai-jie-jian/">
+        </link>
+        <updated>2025-12-18T00:31:30.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows下电池健康度查看脚本]]></title>
+        <id>https://wcwtfhvk.github.io/post/windows-xia-dian-chi-jian-kang-du-cha-kan-jiao-ben/</id>
+        <link href="https://wcwtfhvk.github.io/post/windows-xia-dian-chi-jian-kang-du-cha-kan-jiao-ben/">
+        </link>
+        <updated>2025-12-10T02:12:22.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一眼就知道工作能力很强]]></title>
+        <id>https://wcwtfhvk.github.io/post/yi-yan-jiu-zhi-dao-gong-zuo-neng-li-hen-qiang/</id>
+        <link href="https://wcwtfhvk.github.io/post/yi-yan-jiu-zhi-dao-gong-zuo-neng-li-hen-qiang/">
+        </link>
+        <updated>2025-06-11T07:36:52.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[USB键盘的小工具]]></title>
+        <id>https://wcwtfhvk.github.io/post/usb-jian-pan-de-xiao-gong-ju/</id>
+        <link href="https://wcwtfhvk.github.io/post/usb-jian-pan-de-xiao-gong-ju/">
+        </link>
+        <updated>2025-04-24T02:28:20.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[微信温度报警提醒，ESP8266,树莓派,Python，PHP]]></title>
+        <id>https://wcwtfhvk.github.io/post/wei-xin-wen-du-bao-jing-ti-xing-esp8266shu-mei-pai-pythonphp/</id>
+        <link href="https://wcwtfhvk.github.io/post/wei-xin-wen-du-bao-jing-ti-xing-esp8266shu-mei-pai-pythonphp/">
+        </link>
+        <updated>2019-07-26T07:08:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[注册表一击，Windows10 免密码自动登录域帐户]]></title>
+        <id>https://wcwtfhvk.github.io/post/zhu-ce-biao-yi-ji-windows10-mian-mi-ma-zi-dong-deng-lu-yu-zhang-hu/</id>
+        <link href="https://wcwtfhvk.github.io/post/zhu-ce-biao-yi-ji-windows10-mian-mi-ma-zi-dong-deng-lu-yu-zhang-hu/">
+        </link>
+        <updated>2019-07-24T04:52:28.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MI Max2 刷机指南]]></title>
+        <id>https://wcwtfhvk.github.io/post/mi-max2-shua-ji-zhi-nan/</id>
+        <link href="https://wcwtfhvk.github.io/post/mi-max2-shua-ji-zhi-nan/">
+        </link>
+        <updated>2019-06-28T00:58:06.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux VPS一键屏蔽指定国家所有的IP访问]]></title>
+        <id>https://wcwtfhvk.github.io/post/linux-vps-yi-jian-ping-bi-zhi-ding-guo-jia-suo-you-de-ip-fang-wen/</id>
+        <link href="https://wcwtfhvk.github.io/post/linux-vps-yi-jian-ping-bi-zhi-ding-guo-jia-suo-you-de-ip-fang-wen/">
+        </link>
+        <updated>2019-06-25T02:53:46.000Z</updated>
+    </entry>
+</feed>

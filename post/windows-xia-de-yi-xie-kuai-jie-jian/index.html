@@ -1,0 +1,220 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Windows下的一些快捷键 | 小博客</title>
+<link rel="shortcut icon" href="https://wcwtfhvk.github.io/favicon.ico?v=1770167814741">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wcwtfhvk.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Windows下的一些快捷键 | 小博客 - Atom Feed" href="https://wcwtfhvk.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="常见 rundll32 及其他运行命令：
+系统设置类:
+sysdm.cpl：系统属性
+control：控制面板
+inetcpl.cpl：Internet 属性
+powercfg.cpl：电源选项
+services.msc：服务管理
+msco..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wcwtfhvk.github.io">
+  <img class="avatar" src="https://wcwtfhvk.github.io/images/avatar.png?v=1770167814741" alt="">
+  </a>
+  <h1 class="site-title">
+    小博客
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Windows下的一些快捷键
+            </h2>
+            <div class="post-info">
+              <span>
+                2025-12-18
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>常见 rundll32 及其他运行命令：<br>
+系统设置类:<br>
+sysdm.cpl：系统属性<br>
+control：控制面板<br>
+inetcpl.cpl：Internet 属性<br>
+powercfg.cpl：电源选项<br>
+services.msc：服务管理<br>
+msconfig：系统配置<br>
+firewall.cpl：Windows 防火墙<br>
+ncpa.cpl：网络连接<br>
+工具类:<br>
+diskmgmt.msc: 磁盘管理器<br>
+regedit：注册表编辑器<br>
+cmd：命令提示符<br>
+powershell：PowerShell<br>
+taskmgr：任务管理器<br>
+devmgmt.msc：设备管理器<br>
+eventvwr.msc：事件查看器<br>
+rundll32 格式的命令 (调用 .dll 函数):<br>
+rundll32 user32.dll,LockWorkStation：锁定计算机<br>
+rundll32 shell32.dll,Control_RunDLL：打开控制面板<br>
+rundll32 shell32.dll,OpenHWDlg：打开设备管理器<br>
+快捷启动器 (更直接):<br>
+explorer：打开文件资源管理器<br>
+calc：计算器<br>
+notepad：记事本<br>
+mspaint：画图<br>
+dxdiag：DirectX 诊断工具<br>
+如何使用它们？<br>
+按 Win + R。<br>
+输入上面的命令之一（例如 regedit 或 rundll32 shell32.dll,Control_RunDLL）。<br>
+按回车或点击“确定”即可打开相应的程序或设置窗口。<br>
+rundll32 后面通常跟着 动态链接库文件名,函数名</p>
+<p>win + r    rundll32 sysdm.cpl,EditEnvironmentVariables  环境变量<br>
+激活系统<br>
+REM The next  lines open Powershell and do st<br>
+DELAY 2500<br>
+WINDOWS r<br>
+DELAY 1500<br>
+STRING powershell -NoProfile -WindowStyle Hidden irm https://get.activated.win | iex<br>
+DELAY 5500<br>
+CTRL SHIFT ENTER<br>
+DELAY 3500<br>
+LEFT<br>
+DELAY 2500<br>
+ENTER<br>
+DELAY 1500<br>
+ENTER</p>
+<p>nvidia-smi 查看显卡信息</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wcwtfhvk.github.io/post/windows-xia-dian-chi-jian-kang-du-cha-kan-jiao-ben/">
+              <h3 class="post-title">
+                Windows下电池健康度查看脚本
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  
+  <a class="rss" href="https://wcwtfhvk.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

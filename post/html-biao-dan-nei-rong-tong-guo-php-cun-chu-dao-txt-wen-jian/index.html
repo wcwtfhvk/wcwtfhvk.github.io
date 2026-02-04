@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HTML表单内容通过PHP存储到TXT文件 | 小博客</title>
+<link rel="shortcut icon" href="https://wcwtfhvk.github.io/favicon.ico?v=1770167814741">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wcwtfhvk.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="HTML表单内容通过PHP存储到TXT文件 | 小博客 - Atom Feed" href="https://wcwtfhvk.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="html部分
+
+您的姓名: 
+您的微信: 
+您的公司: 
+您的电话: 
+您的职位: 
+
+
+php部分
+
+
+嗨~你好！ 
+微信
+联系电话
+公司
+职位
+请将该页面展示给工作人员后领取小礼品请勿刷新改页面
+..." />
+    <meta name="keywords" content="技术经验" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wcwtfhvk.github.io">
+  <img class="avatar" src="https://wcwtfhvk.github.io/images/avatar.png?v=1770167814741" alt="">
+  </a>
+  <h1 class="site-title">
+    小博客
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              HTML表单内容通过PHP存储到TXT文件
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-05-12
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+                <a href="https://wcwtfhvk.github.io/tag/pMn_FNUPRNW/" class="post-tag">
+                  # 技术经验
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>html部分</p>
+<form action="action.php" method="post">
+<p>您的姓名: <input type="text" name="name" /></p>
+<p>您的微信: <input type="text" name="wechat" /></p>
+<p>您的公司: <input type="text" name="company" /></p>
+<p>您的电话: <input type="text" name="tel" /></p>
+<p>您的职位: <input type="text" name="zhiwei" /></p>
+<p><input type="submit" /></p>
+</form>
+<p>php部分</p>
+<?php 
+session_start(); 
+$allow_sep = "3000000"; 
+if (isset($_SESSION["post_sep"])) 
+{ 
+if (time() - $_SESSION["post_sep"] < $allow_sep) 
+{
+
+    exit("请不要刷新！刷新后礼品逃跑了。。。"); 
+} 
+else 
+{
+
+ $_SESSION["post_sep"] = time(); 
+} 
+} 
+else 
+{ 
+$_SESSION["post_sep"] = time(); 
+} 
+?>
+<?php
+$name = $_POST['name'];
+$wechat = $_POST['wechat'];
+$company = $_POST['company'];
+$tel = $_POST['tel'];
+$zhiwei = $_POST['zhiwei'];
+$content = "姓名: ".$name ."微信: ".$wechat."公司: ".$company."联系电话: ".$tel."职位: ".$zhiwei."\n";
+$f = fopen("/xxx/list.txt", 'a+');//指定文件路径Windows下用/，在文件的结尾插入，所以用了fopen和a+，
+fwrite($f, $content);
+fclose($f);
+?>
+<p>嗨~你好！ <?php echo htmlspecialchars($_POST['name']); ?></p>
+<p>微信<?php echo htmlspecialchars($_POST['wechat']); ?></p>
+<p>联系电话<?php echo (int)$_POST['tel']; ?></p>
+<p>公司<?php echo htmlspecialchars($_POST['company']); ?></p>
+<p>职位<?php echo htmlspecialchars($_POST['zhiwei']); ?></p>
+<p>请将该页面展示给工作人员后领取小礼品请勿刷新改页面</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wcwtfhvk.github.io/post/debian-hou-tai-yun-xing-frp/">
+              <h3 class="post-title">
+                Debian 后台运行FRP
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  
+  <a class="rss" href="https://wcwtfhvk.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

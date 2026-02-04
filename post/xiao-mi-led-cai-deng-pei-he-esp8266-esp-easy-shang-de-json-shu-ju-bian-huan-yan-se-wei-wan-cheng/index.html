@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>小米LED彩灯配合ESP8266 ESP Easy上的JSON数据变换颜色（未完成） | 小博客</title>
+<link rel="shortcut icon" href="https://wcwtfhvk.github.io/favicon.ico?v=1770167814741">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wcwtfhvk.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="小米LED彩灯配合ESP8266 ESP Easy上的JSON数据变换颜色（未完成） | 小博客 - Atom Feed" href="https://wcwtfhvk.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="JSON example using Sonoff Basic Smart Switch &amp; ESPEasy.
+ThomasB, Apr-10-2019
+Connect to ESPEasy on local IP (change ..." />
+    <meta name="keywords" content="技术经验" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wcwtfhvk.github.io">
+  <img class="avatar" src="https://wcwtfhvk.github.io/images/avatar.png?v=1770167814741" alt="">
+  </a>
+  <h1 class="site-title">
+    小博客
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              小米LED彩灯配合ESP8266 ESP Easy上的JSON数据变换颜色（未完成）
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-06-25
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+                <a href="https://wcwtfhvk.github.io/tag/pMn_FNUPRNW/" class="post-tag">
+                  # 技术经验
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>JSON example using Sonoff Basic Smart Switch &amp; ESPEasy.<br>
+ThomasB, Apr-10-2019<br>
+Connect to ESPEasy on local IP (change as needed to match the device) and load the jason into a array called &quot;espez&quot;<br>
+import json, requests<br>
+url = requests.get('http://192.168.1.81/json')<br>
+espez = json.loads(url.text)</p>
+<p>Show an example of printing the current value of the built-in push button switch.<br>
+Device configuration as follows: Task= 1, Device= Switch input-Switch, Name= PBSW<br>
+print(&quot;Device Name: &quot;, espez'Sensors'['TaskName'])<br>
+wendu = int(espez'Sensors''TaskValues'['Value'])</p>
+<p>print(&quot;Temp is : &quot;, wendu)<br>
+if wendu &gt;=27: #判断并且显示温度高低</p>
+<p>print('Hot Temp is:',wendu,'°C')<br>
+else:</p>
+<p>print('Cool Temp is:',wendu,'°C')<br>
+参考链接：<br>
+https://www.letscontrolit.com/forum/viewtopic.php?f=6&amp;t=6612&amp;p=36311</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wcwtfhvk.github.io/post/50-ge/">
+              <h3 class="post-title">
+                50个
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  
+  <a class="rss" href="https://wcwtfhvk.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

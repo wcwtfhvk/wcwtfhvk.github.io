@@ -1,0 +1,304 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>chartjs做图表的问题 | 小博客</title>
+<link rel="shortcut icon" href="https://wcwtfhvk.github.io/favicon.ico?v=1770167814741">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wcwtfhvk.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="chartjs做图表的问题 | 小博客 - Atom Feed" href="https://wcwtfhvk.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="现有个每天日期作为数据名的log是这样的格式,每分钟都会有数据写入
+2017.06.15_12:24:55 3046 9
+2017.06.15_12:25:25 3017 9
+2017.06.15_12:25:55 3003 9
+2017...." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wcwtfhvk.github.io">
+  <img class="avatar" src="https://wcwtfhvk.github.io/images/avatar.png?v=1770167814741" alt="">
+  </a>
+  <h1 class="site-title">
+    小博客
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              chartjs做图表的问题
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-04-08
+              </span>
+              <span>
+                5 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>现有个每天日期作为数据名的log是这样的格式,每分钟都会有数据写入<br>
+2017.06.15_12:24:55 3046 9<br>
+2017.06.15_12:25:25 3017 9<br>
+2017.06.15_12:25:55 3003 9<br>
+2017.06.15_12:26:26 3039 9<br>
+2017.06.15_12:26:56 3078 9<br>
+2017.06.15_12:27:26 3343 10<br>
+2017.06.15_12:27:56 3272 10<br>
+2017.06.15_12:28:26 3260 10<br>
+2017.06.15_12:28:57 3406 10<br>
+2017.06.15_12:29:27 3744 11<br>
+2017.06.15_12:29:57 4031 12<br>
+2017.06.15_12:30:27 4201 13<br>
+2017.06.15_12:30:57 4222 13<br>
+2017.06.15_12:31:28 4036 12<br>
+2017.06.15_12:31:58 3893 12<br>
+2017.06.15_12:32:28 3823 11<br>
+2017.06.15_12:32:58 3806 11<br>
+2017.06.15_12:33:28 4843 14<br>
+2017.06.15_12:33:59 4782 14<br>
+2017.06.15_12:34:29 4517 13<br>
+...<br>
+...<br>
+...</p>
+<p>想截取最新的十行里第一列和第二列的数据制作数据在chartjs里做图表，请问各位大大怎么操作呢？</p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<canvas id="myChart" width="400" height="400"></canvas>
+<script src="https://cdn.bootcss.com/Chart.js/2.6.0/Chart.bundle.min.js";></script>
+<script type="text/javascript">
+var rawData = `2017.06.15_12:24:55 3046 9
+2017.06.15_12:25:25 3017 9
+2017.06.15_12:25:55 3003 9
+2017.06.15_12:26:26 3039 9
+2017.06.15_12:26:56 3078 9
+2017.06.15_12:27:26 3343 10
+2017.06.15_12:27:56 3272 10
+2017.06.15_12:28:26 3260 10
+2017.06.15_12:28:57 3406 10
+2017.06.15_12:29:27 3744 11
+2017.06.15_12:29:57 4031 12
+2017.06.15_12:30:27 4201 13
+2017.06.15_12:30:57 4222 13
+2017.06.15_12:31:28 4036 12
+2017.06.15_12:31:58 3893 12
+2017.06.15_12:32:28 3823 11
+2017.06.15_12:32:58 3806 11
+2017.06.15_12:33:28 4843 14
+2017.06.15_12:33:59 4782 14
+2017.06.15_12:34:29 4517 13`;
+<p>var labels = [];<br>
+var datas = [];<br>
+rawData.split(&quot;n&quot;).forEach(function(value, key) {</p>
+<p>var arr = value.split(' ');<br>
+labels.push(arr[0]);<br>
+datas.push(arr[1]);<br>
+if (key &gt; 10) {<br>
+return;<br>
+}<br>
+});</p>
+<p>var config = {</p>
+<p>type: 'line',<br>
+data: {<br>
+labels: labels,<br>
+datasets: [{<br>
+label: &quot;My First dataset&quot;,<br>
+backgroundColor: 'rgb(255, 99, 132)',<br>
+borderColor: 'rgb(255, 99, 132)',<br>
+data: datas,<br>
+fill: false,<br>
+}]<br>
+},<br>
+options: {<br>
+responsive: true,<br>
+title: {<br>
+display: true,<br>
+text: 'Chart.js Line Chart'<br>
+},<br>
+tooltips: {<br>
+mode: 'index',<br>
+intersect: false,<br>
+},<br>
+hover: {<br>
+mode: 'nearest',<br>
+intersect: true<br>
+},<br>
+scales: {<br>
+xAxes: [{<br>
+display: true,<br>
+scaleLabel: {<br>
+display: true,<br>
+labelString: 'Month'<br>
+}<br>
+}],<br>
+yAxes: [{<br>
+display: true,<br>
+scaleLabel: {<br>
+display: true,<br>
+labelString: 'Value'<br>
+}<br>
+}]<br>
+}<br>
+}<br>
+};</p>
+<p>var ctx = document.getElementById(&quot;myChart&quot;).getContext(&quot;2d&quot;);<br>
+var myNewChart = new Chart(ctx, config);<br>
+</script></p>
+</body>
+</html>
+<p>直接用js就行了，labels是横坐标数组，datas是具体的数据<br>
+var rawData = <code>2017.06.15_12:24:55 3046 9 2017.06.15_12:25:25 3017 9 2017.06.15_12:25:55 3003 9 2017.06.15_12:26:26 3039 9 2017.06.15_12:26:56 3078 9 2017.06.15_12:27:26 3343 10 2017.06.15_12:27:56 3272 10 2017.06.15_12:28:26 3260 10 2017.06.15_12:28:57 3406 10 2017.06.15_12:29:27 3744 11 2017.06.15_12:29:57 4031 12 2017.06.15_12:30:27 4201 13 2017.06.15_12:30:57 4222 13 2017.06.15_12:31:28 4036 12 2017.06.15_12:31:58 3893 12 2017.06.15_12:32:28 3823 11 2017.06.15_12:32:58 3806 11 2017.06.15_12:33:28 4843 14 2017.06.15_12:33:59 4782 14 2017.06.15_12:34:29 4517 13</code>;</p>
+<p>var labels = [];<br>
+var datas = [];<br>
+rawData.split(&quot;n&quot;).forEach(function(value, key) {</p>
+<pre><code>var arr = value.split(' ');
+labels.push(arr[0]);
+datas.push(arr[1]);
+if (key &gt; 10) {
+        return;
+}
+</code></pre>
+<p>});</p>
+<p>var rawData = <?php echo file_get_contents('路径/xxx.txt');?>;</p>
+<p>十条的问题我写错了，forEach那段代码改成这样就是十条了<br>
+rawData.split(&quot;n&quot;).forEach(function(value, key) {</p>
+<p>if (key &gt;= 10) {<br>
+return;<br>
+}<br>
+var arr = value.split(' ');<br>
+labels.push(arr[0]);<br>
+datas.push(arr[1]);<br>
+});</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wcwtfhvk.github.io/post/openwrt-x86x64-an-zhuang-fang-fa/">
+              <h3 class="post-title">
+                Openwrt x86/x64 安装方法
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  
+  <a class="rss" href="https://wcwtfhvk.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

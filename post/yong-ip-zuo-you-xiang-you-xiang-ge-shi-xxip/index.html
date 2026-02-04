@@ -1,0 +1,227 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>用 IP 做邮箱 邮箱格式 : XX@IP | 小博客</title>
+<link rel="shortcut icon" href="https://wcwtfhvk.github.io/favicon.ico?v=1770167814741">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wcwtfhvk.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="用 IP 做邮箱 邮箱格式 : XX@IP | 小博客 - Atom Feed" href="https://wcwtfhvk.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="前几日与跟小伙伴一起折腾东西无意间发现的IP邮箱（可以接收邮件），于是我便顺手去QQ个人中心设置了主显帐号：
+准备
+准备一台小鸡（VPS 需要有1个外网 IP）即可，博主就用 256 MB 的小鸡鸡来瞎搞着玩吧。
+方法
+利用 Forsake..." />
+    <meta name="keywords" content="网络转载" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wcwtfhvk.github.io">
+  <img class="avatar" src="https://wcwtfhvk.github.io/images/avatar.png?v=1770167814741" alt="">
+  </a>
+  <h1 class="site-title">
+    小博客
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              用 IP 做邮箱 邮箱格式 : XX@IP
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-04-11
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://wcwtfhvk.github.io/tag/FA9GNkMqkx/" class="post-tag">
+                  # 网络转载
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>前几日与跟小伙伴一起折腾东西无意间发现的IP邮箱（可以接收邮件），于是我便顺手去QQ个人中心设置了主显帐号：<br>
+准备<br>
+准备一台小鸡（VPS 需要有1个外网 IP）即可，博主就用 256 MB 的小鸡鸡来瞎搞着玩吧。</p>
+<p>方法<br>
+利用 Forsaken-Mail 来搭建一个临时的邮箱系统就可以了，地址：https://github.com/denghongcai/forsaken-mail</p>
+<p>搭建<br>
+以下教程转载于：如有乐享</p>
+<p>作者开源地址：https://github.com/denghongcai/forsaken-mail</p>
+<p>源码是nodejs编写。部署非常简单！</p>
+<p>Linux部署<br>
+首先需要安装 nodejs 转向教程 &gt;&gt;&gt; 【小白教程】nodejs安装教程指南<br>
+可以按照依次执行一下脚本即可安装运行项目。<br>
+每个命令都有说明，自己选择运行即可~<br>
+以下脚本只在CentOS6 系统调试运行过，其他环境请自行修改运行~</p>
+<p>安装git<br>
+yum install git –y</p>
+<p>安装nvm<br>
+curl –o– https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash<br>
+export NVM_DIR=“<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mi>O</mi><mi>M</mi><mi>E</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">.</mi><mi>n</mi><mi>v</mi><mi>m</mi><mi mathvariant="normal">”</mi><mo>[</mo><mi mathvariant="normal">–</mi><mi>s</mi><mi mathvariant="normal">“</mi></mrow><annotation encoding="application/x-tex">HOME/.nvm”
+[ –s “</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord">/</span><span class="mord">.</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">m</span><span class="mord">”</span><span class="mopen">[</span><span class="mord" style="margin-right:0.02778em;">–</span><span class="mord mathdefault">s</span><span class="mord">“</span></span></span></span>NVM_DIR/nvm.sh” ] &amp;&amp; . “$NVM_DIR/nvm.sh”</p>
+<p>安装nodejs和 npm<br>
+nvm install 6.10.0</p>
+<p>查看nodejs版本是否正确，显示 6.10.0<br>
+node –v</p>
+<p>下载项目源码<br>
+git clone https://github.com/malaohu/forsaken-mail.git<br>
+cd forsaken–mail</p>
+<p>安装项目需要的库<br>
+npm install</p>
+<p>安装pm2工具<br>
+npm install –g pm2</p>
+<p>禁用postfix和sendmail<br>
+killall sendmail<br>
+/etc/init.d/postfix stop<br>
+chkconfig —level 2345 postfix off<br>
+chkconfig —level 2345 sendmail off</p>
+<p>启动项目<br>
+pm2 start bin/www</p>
+<p>设置开机启动<br>
+pm2 startup<br>
+pm2 save<br>
+Docker部署<br>
+部署只需要一行代码：</p>
+<p>1<br>
+docker run —name forsaken–mail –d –p 25:25 –p 3000:3000 malaohu/forsaken–mail</p>
+<p>部署完成即可！</p>
+<p>然后直接使用EndPoint的网址加上端口 3000 即可访问了！</p>
+<p>博主测试部署：</p>
+<p>绑定域名<br>
+直接将域名解析到服务器IP， 或者CNAME到某个网址即可。</p>
+<p>想拥有你自己的域名？</p>
+<p>试一试将自己域名CNAME到 IP即可<br>
+然后使用你的域名加上3000 端口访问一下就可以咯~<br>
+原文链接：<br>
+https://wangdalao.com/1015.html</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wcwtfhvk.github.io/post/chartjs-zuo-tu-biao-de-wen-ti/">
+              <h3 class="post-title">
+                chartjs做图表的问题
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  
+  <a class="rss" href="https://wcwtfhvk.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
